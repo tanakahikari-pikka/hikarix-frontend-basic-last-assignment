@@ -24,6 +24,11 @@
       .event-card {
         a {
           height: 142px;
+          .event-thumbnail {
+            .img {
+              width: 100%;
+            }
+          }
           @media (max-width: $breakpoint-lg) {
             height: 69px;
           }
