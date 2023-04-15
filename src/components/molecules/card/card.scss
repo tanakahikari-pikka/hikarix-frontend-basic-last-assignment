@@ -14,7 +14,6 @@
       height: 100%;
       @media screen and (max-width: $breakpoint-md) {
         transition: none;
-        transform: scale(1.2);
       }
     }
     &:hover {
