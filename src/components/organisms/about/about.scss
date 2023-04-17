@@ -1,0 +1,28 @@
+@use "../../variables" as *;
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .images {
+    width: 100%;
+    display: flex;
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+    }
+    img {
+      width: 50%;
+    }
+  }
+  .message_wrapper {
+    background-color: $white_smoke;
+    .main-heading {
+      color: $orange_bistre;
+    }
+    .main-caption {
+      font-family: $fontfamily-gothic;
+    }
+  }
+}
