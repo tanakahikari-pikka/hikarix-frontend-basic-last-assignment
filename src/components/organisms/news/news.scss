@@ -18,6 +18,9 @@
         outline-offset: -1px;
         border-bottom: 1px solid $gray_gainsboro;
         height: 85px;
+        @media (max-width: $breakpoint-md) {
+          padding: 10px 20px;
+        }
         &:hover .news-caption {
           color: $orange_bistre;
         }
