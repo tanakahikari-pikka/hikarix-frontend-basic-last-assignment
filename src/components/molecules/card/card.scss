@@ -1,29 +1,31 @@
 @use "../../atoms/button/button.scss";
 @use "../../variables" as *;
 @use "../../reset" as *;
-.card{
+.card {
   border: none;
   position: relative;
   overflow: hidden;
-  figure{
-    img{
+  border-radius: 0;
+  figure {
+    img {
       z-index: 1;
       transition: 0.5s ease;
       overflow: hidden;
-      @media screen and (max-width: $breakpoint-md){
+      height: 100%;
+      @media screen and (max-width: $breakpoint-md) {
         transition: none;
       }
     }
-    &:hover{
-      img{
+    &:hover {
+      img {
         transform: scale(1.2);
-        @media screen and (max-width: $breakpoint-md){
+        @media screen and (max-width: $breakpoint-md) {
           transform: none;
         }
       }
     }
   }
-  .cardTitle{
+  .cardTitle {
     z-index: 2;
     position: absolute;
     font-weight: 700;
@@ -31,8 +33,9 @@
     font-size: $fontsize-l;
     line-height: 29px;
     color: $orange_bistre;
+    font-family: $fontfamily-gothic;
   }
-  .triangle{
+  .triangle {
     z-index: 1;
     position: absolute;
     width: 0;
@@ -41,18 +44,19 @@
     border-width: 150px 150px 0 0;
     border-color: $white transparent transparent transparent;
   }
-  .card-body{
+  .card-body {
     z-index: 2;
     background: $white_smoke;
     padding: 32px;
     overflow: hidden;
-    .card-text{
+    .card-text {
       margin-bottom: 30px;
       font-size: $fontsize-s;
       line-height: 33px;
       color: $black;
+      font-family: $fontfamily-gothic;
     }
-    .center{
+    .center {
       text-align: center;
     }
   }
