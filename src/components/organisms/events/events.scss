@@ -5,8 +5,7 @@
   flex-direction: column;
   align-items: stretch;
   margin-bottom: 35px;
-
-  @media (min-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-md) {
     margin-bottom: 0;
   }
 
@@ -21,16 +20,34 @@
     }
 
     .event-card {
+      height: 140px;
+      border: 1px solid $gray_gainsboro;
+      border-bottom: none;
+      &:last-of-type {
+        border-bottom: 1px solid $gray_gainsboro;
+      }
+      @media (max-width: $breakpoint-md) {
+        height: 67px;
+      }
+
+      .event-caption {
+        width: calc(100% - 207px);
+        padding: 0 24px;
+        @media (max-width: $breakpoint-lg) {
+          width: 100%;
+          padding: 10px 20px 16px;
+        }
+      }
       & > a {
-        height: 80px;
         display: flex;
         text-decoration: none;
 
         .event-thumbnail {
-          display: none;
           width: 207px;
           overflow: hidden;
-
+          @media (max-width: $breakpoint-lg) {
+            display: none;
+          }
           & > img {
             height: 100%;
             transition: transform 0.5s ease;
@@ -42,9 +59,9 @@
         }
 
         .event-caption {
-          width: 100%;
           background-color: $white;
-          border: 1px solid $gray_gainsboro;
+          font-family: $fontfamily-gothic;
+          font-size: $fontsize-m;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -54,29 +71,20 @@
           & > h3 {
             color: $black;
             font-size: $fontsize-m;
-            overflow: hidden;
-            white-space: nowrap;
+            font-weight: 400;
+            white-space: wrap;
             text-overflow: ellipsis;
             margin-bottom: 8px;
             width: 100%;
+            @media (max-width: $breakpoint-lg) {
+              overflow: hidden;
+              white-space: nowrap;
+            }
           }
 
           .posted-at {
             color: $gray_nobel;
             font-size: $fontsize-xs;
-          }
-        }
-
-        @media (min-width: $breakpoint-md) {
-          height: 134px;
-
-          .event-thumbnail {
-            display: block;
-          }
-
-          .event-caption {
-            width: calc(100% - 207px);
-            padding: 0 24px;
           }
         }
       }
@@ -85,5 +93,8 @@
         border-top: none;
       }
     }
+  }
+  .news-and-events-more {
+    font-family: $fontfamily-gothic;
   }
 }
